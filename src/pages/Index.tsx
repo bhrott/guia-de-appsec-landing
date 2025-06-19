@@ -3,88 +3,111 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Shield, Youtube, Headphones, ExternalLink, Mail, MapPin, Calendar, BookOpen } from "lucide-react";
+import { Shield, Youtube, Headphones, ExternalLink, Mail, MapPin, Calendar, BookOpen, Lock, Server, Brain, Terminal, Cpu, Zap } from "lucide-react";
 import { InstagramIcon, LinkedinIcon, YoutubeIcon } from "@/components/SocialIcons";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-[#141113] text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-800 to-slate-900 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-6 py-24 text-center">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#141113] via-gray-900 to-black">
+        <div className="absolute inset-0 matrix-bg"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#03989e]/20 to-transparent"></div>
+        <div className="relative container mx-auto px-6 py-24 text-center z-10">
           <div className="mb-8 flex justify-center">
-            <div className="rounded-full bg-blue-500/20 p-6 backdrop-blur-sm border border-blue-400/30">
-              <Shield className="h-16 w-16 text-blue-300" />
+            <div className="rounded-full bg-[#03989e]/20 p-6 backdrop-blur-sm border border-[#03989e]/50 cyber-glow">
+              <Shield className="h-16 w-16 text-[#03989e]" />
             </div>
           </div>
-          <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-7xl">
+          <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-7xl bg-gradient-to-r from-[#03989e] to-cyan-300 bg-clip-text text-transparent">
             Guia de AppSec
           </h1>
-          <p className="mx-auto max-w-2xl text-xl text-blue-100 mb-8">
-            Seu recurso definitivo para Segurança de Aplicações. Conteúdo especializado, 
-            insights práticos e as melhores práticas do mercado.
+          <p className="mx-auto max-w-2xl text-xl text-gray-300 mb-8">
+            Especialista em Segurança de Aplicações, IA e Cibersegurança. 
+            Conteúdo técnico avançado para profissionais de tecnologia.
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3">
-            Explorar Conteúdo
+          <div className="flex justify-center gap-4 mb-8">
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#03989e]/20 rounded-full border border-[#03989e]/30">
+              <Terminal className="h-4 w-4 text-[#03989e]" />
+              <span className="text-sm text-gray-300">Security Research</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#03989e]/20 rounded-full border border-[#03989e]/30">
+              <Brain className="h-4 w-4 text-[#03989e]" />
+              <span className="text-sm text-gray-300">AI Security</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#03989e]/20 rounded-full border border-[#03989e]/30">
+              <Cpu className="h-4 w-4 text-[#03989e]" />
+              <span className="text-sm text-gray-300">DevSecOps</span>
+            </div>
+          </div>
+          <Button size="lg" className="bg-[#03989e] hover:bg-[#03989e]/80 text-white font-semibold px-8 py-3 border border-[#03989e]/50">
+            <Zap className="h-5 w-5 mr-2" />
+            Explorar Arsenal
           </Button>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-[#141113] to-gray-900">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Sobre o Autor</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Especialista em Segurança de Aplicações com mais de 10 anos de experiência 
-                na área. Autor de diversos artigos e creator de conteúdo focado em ajudar 
-                desenvolvedores e profissionais de segurança a implementar as melhores 
-                práticas de AppSec.
+              <h2 className="text-4xl font-bold text-white mb-6 flex items-center">
+                <Lock className="h-10 w-10 text-[#03989e] mr-4" />
+                Security Expert
+              </h2>
+              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                Especialista em Segurança de Aplicações com foco em tecnologias emergentes 
+                e inteligência artificial. Pesquisador de vulnerabilidades, arquiteto de 
+                soluções de segurança e evangelista de práticas DevSecOps.
               </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Apaixonado por compartilhar conhecimento através de YouTube, podcasts e 
-                workshops, sempre buscando tornar a segurança de aplicações mais acessível 
-                para todos.
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                Dedicado a explorar as intersecções entre IA, cibersegurança e desenvolvimento 
+                seguro, compartilhando insights através de conteúdo técnico avançado.
               </p>
               
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Especialidades</h3>
+                <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                  <Server className="h-6 w-6 text-[#03989e] mr-2" />
+                  Core Expertise
+                </h3>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800">OWASP Top 10</Badge>
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800">Secure Coding</Badge>
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800">Penetration Testing</Badge>
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800">DevSecOps</Badge>
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800">Security Architecture</Badge>
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800">Vulnerability Assessment</Badge>
+                  <Badge className="bg-[#03989e]/20 text-[#03989e] border border-[#03989e]/30">Zero Trust Architecture</Badge>
+                  <Badge className="bg-[#03989e]/20 text-[#03989e] border border-[#03989e]/30">AI Security</Badge>
+                  <Badge className="bg-[#03989e]/20 text-[#03989e] border border-[#03989e]/30">Threat Modeling</Badge>
+                  <Badge className="bg-[#03989e]/20 text-[#03989e] border border-[#03989e]/30">Red Team Operations</Badge>
+                  <Badge className="bg-[#03989e]/20 text-[#03989e] border border-[#03989e]/30">Cloud Security</Badge>
+                  <Badge className="bg-[#03989e]/20 text-[#03989e] border border-[#03989e]/30">Secure SDLC</Badge>
                 </div>
               </div>
 
               <div className="space-y-3">
-                <div className="flex items-center text-gray-600">
-                  <MapPin className="h-5 w-5 mr-3 text-blue-600" />
+                <div className="flex items-center text-gray-300">
+                  <MapPin className="h-5 w-5 mr-3 text-[#03989e]" />
                   <span>São Paulo, Brasil</span>
                 </div>
-                <div className="flex items-center text-gray-600">
-                  <Mail className="h-5 w-5 mr-3 text-blue-600" />
-                  <span>contato@guiadeappsec.com</span>
+                <div className="flex items-center text-gray-300">
+                  <Mail className="h-5 w-5 mr-3 text-[#03989e]" />
+                  <span>sec@guiadeappsec.com</span>
                 </div>
-                <div className="flex items-center text-gray-600">
-                  <Calendar className="h-5 w-5 mr-3 text-blue-600" />
-                  <span>10+ anos de experiência</span>
+                <div className="flex items-center text-gray-300">
+                  <Calendar className="h-5 w-5 mr-3 text-[#03989e]" />
+                  <span>10+ anos em Cybersecurity</span>
                 </div>
               </div>
             </div>
             
             <div className="order-1 lg:order-2 flex justify-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl rotate-6"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#03989e] to-cyan-500 rounded-2xl rotate-6 cyber-glow"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                  alt="Autor do Guia de AppSec"
-                  className="relative rounded-2xl shadow-2xl w-80 h-80 object-cover"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Security Expert"
+                  className="relative rounded-2xl shadow-2xl w-80 h-80 object-cover border-2 border-[#03989e]/30"
                 />
+                <div className="absolute -bottom-4 -right-4 bg-[#03989e] rounded-full p-3 border-4 border-[#141113]">
+                  <Terminal className="h-6 w-6 text-white" />
+                </div>
               </div>
             </div>
           </div>
@@ -92,108 +115,111 @@ const Index = () => {
       </section>
 
       {/* YouTube Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-[#141113]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <Youtube className="h-12 w-12 text-red-600 mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Canal no YouTube</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Vídeos semanais sobre segurança de aplicações, tutoriais práticos e 
-              análises das últimas vulnerabilidades descobertas.
+            <Youtube className="h-12 w-12 text-[#03989e] mx-auto mb-4" />
+            <h2 className="text-4xl font-bold text-white mb-4">Security Channel</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Análises técnicas de vulnerabilidades, demonstrações de ferramentas 
+              e deep dives em tópicos avançados de segurança.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="bg-gray-800/50 border-[#03989e]/30 hover:bg-gray-800/70 transition-all hover:border-[#03989e]/50">
               <CardHeader>
-                <div className="aspect-video bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
-                  <Youtube className="h-12 w-12 text-red-600" />
+                <div className="aspect-video bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#03989e]/20 to-transparent"></div>
+                  <Youtube className="h-12 w-12 text-[#03989e] z-10" />
                 </div>
-                <CardTitle className="text-lg">OWASP Top 10 Explicado</CardTitle>
-                <CardDescription>
-                  Série completa explicando cada vulnerabilidade do OWASP Top 10 2021
+                <CardTitle className="text-lg text-white">AI Security Threats</CardTitle>
+                <CardDescription className="text-gray-300">
+                  Análise das principais ameaças em sistemas de IA e ML
                 </CardDescription>
               </CardHeader>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="bg-gray-800/50 border-[#03989e]/30 hover:bg-gray-800/70 transition-all hover:border-[#03989e]/50">
               <CardHeader>
-                <div className="aspect-video bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
-                  <Youtube className="h-12 w-12 text-red-600" />
+                <div className="aspect-video bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#03989e]/20 to-transparent"></div>
+                  <Terminal className="h-12 w-12 text-[#03989e] z-10" />
                 </div>
-                <CardTitle className="text-lg">Secure Code Review</CardTitle>
-                <CardDescription>
-                  Como fazer revisão de código focada em segurança
+                <CardTitle className="text-lg text-white">Advanced Pentesting</CardTitle>
+                <CardDescription className="text-gray-300">
+                  Técnicas avançadas de penetration testing
                 </CardDescription>
               </CardHeader>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="bg-gray-800/50 border-[#03989e]/30 hover:bg-gray-800/70 transition-all hover:border-[#03989e]/50">
               <CardHeader>
-                <div className="aspect-video bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
-                  <Youtube className="h-12 w-12 text-red-600" />
+                <div className="aspect-video bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#03989e]/20 to-transparent"></div>
+                  <Brain className="h-12 w-12 text-[#03989e] z-10" />
                 </div>
-                <CardTitle className="text-lg">DevSecOps na Prática</CardTitle>
-                <CardDescription>
-                  Implementando segurança no pipeline de desenvolvimento
+                <CardTitle className="text-lg text-white">Zero-Day Research</CardTitle>
+                <CardDescription className="text-gray-300">
+                  Metodologias de pesquisa de vulnerabilidades
                 </CardDescription>
               </CardHeader>
             </Card>
           </div>
           
           <div className="text-center mt-8">
-            <Button className="bg-red-600 hover:bg-red-700 text-white">
+            <Button className="bg-[#03989e] hover:bg-[#03989e]/80 text-white border border-[#03989e]/50">
               <Youtube className="h-5 w-5 mr-2" />
-              Visitar Canal
+              Acessar Canal
             </Button>
           </div>
         </div>
       </section>
 
       {/* Podcasts Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-[#141113] to-gray-900">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <Headphones className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Podcasts</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Participações em podcasts e programa próprio discutindo os temas 
-              mais importantes da segurança de aplicações.
+            <Headphones className="h-12 w-12 text-[#03989e] mx-auto mb-4" />
+            <h2 className="text-4xl font-bold text-white mb-4">Security Podcasts</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discussões aprofundadas sobre cibersegurança, threat intelligence 
+              e as últimas tendências em security research.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="bg-gray-800/50 border-[#03989e]/30 hover:bg-gray-800/70 transition-all">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Headphones className="h-8 w-8 text-purple-600" />
+                <div className="w-16 h-16 bg-[#03989e]/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#03989e]/50">
+                  <Headphones className="h-8 w-8 text-[#03989e]" />
                 </div>
-                <CardTitle className="text-xl">AppSec Talks</CardTitle>
-                <CardDescription className="text-base">
-                  Podcast semanal com discussões sobre as últimas tendências em 
-                  segurança de aplicações e entrevistas com especialistas.
+                <CardTitle className="text-xl text-white">CyberSec Deep Dive</CardTitle>
+                <CardDescription className="text-base text-gray-300">
+                  Análises técnicas de incidentes, threat hunting e 
+                  entrevistas com especialistas da indústria.
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">
+                <Button variant="outline" className="border-[#03989e] text-[#03989e] hover:bg-[#03989e]/10">
                   Ouvir Episódios
                 </Button>
               </CardContent>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="bg-gray-800/50 border-[#03989e]/30 hover:bg-gray-800/70 transition-all">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Headphones className="h-8 w-8 text-green-600" />
+                <div className="w-16 h-16 bg-[#03989e]/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#03989e]/50">
+                  <Brain className="h-8 w-8 text-[#03989e]" />
                 </div>
-                <CardTitle className="text-xl">Security Cast</CardTitle>
-                <CardDescription className="text-base">
-                  Participações regulares no Security Cast, discutindo cases reais 
-                  e análises de incidentes de segurança.
+                <CardTitle className="text-xl text-white">AI Security Cast</CardTitle>
+                <CardDescription className="text-base text-gray-300">
+                  Foco nas implicações de segurança da IA, machine learning 
+                  security e defensive AI strategies.
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">
+                <Button variant="outline" className="border-[#03989e] text-[#03989e] hover:bg-[#03989e]/10">
                   Ouvir Episódios
                 </Button>
               </CardContent>
@@ -203,128 +229,128 @@ const Index = () => {
       </section>
 
       {/* Social Media Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-[#141113]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Redes Sociais</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Acompanhe as últimas atualizações, dicas rápidas e interaja com a comunidade 
-              de segurança através das redes sociais.
+            <h2 className="text-4xl font-bold text-white mb-4">Security Network</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Conecte-se para insights diários, threat intelligence e discussões 
+              sobre as últimas descobertas em cibersegurança.
             </p>
           </div>
           
           <div className="flex justify-center space-x-8">
             <a 
               href="#" 
-              className="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="group flex flex-col items-center p-8 bg-gray-800/50 rounded-2xl border border-[#03989e]/30 hover:bg-gray-800/70 transition-all duration-300 hover:-translate-y-2 hover:border-[#03989e]/50"
             >
-              <LinkedinIcon className="h-16 w-16 text-blue-600 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-semibold text-gray-900 mt-4">LinkedIn</h3>
-              <p className="text-gray-600 text-center mt-2">Artigos técnicos e insights profissionais</p>
+              <LinkedinIcon className="h-16 w-16 text-[#03989e] group-hover:scale-110 transition-transform" />
+              <h3 className="text-xl font-semibold text-white mt-4">LinkedIn</h3>
+              <p className="text-gray-300 text-center mt-2">Research papers e análises técnicas</p>
             </a>
             
             <a 
               href="#" 
-              className="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="group flex flex-col items-center p-8 bg-gray-800/50 rounded-2xl border border-[#03989e]/30 hover:bg-gray-800/70 transition-all duration-300 hover:-translate-y-2 hover:border-[#03989e]/50"
             >
-              <InstagramIcon className="h-16 w-16 text-pink-600 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-semibold text-gray-900 mt-4">Instagram</h3>
-              <p className="text-gray-600 text-center mt-2">Behind the scenes e conteúdo visual</p>
+              <InstagramIcon className="h-16 w-16 text-[#03989e] group-hover:scale-110 transition-transform" />
+              <h3 className="text-xl font-semibold text-white mt-4">Instagram</h3>
+              <p className="text-gray-300 text-center mt-2">Security tips e behind the scenes</p>
             </a>
             
             <a 
               href="#" 
-              className="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="group flex flex-col items-center p-8 bg-gray-800/50 rounded-2xl border border-[#03989e]/30 hover:bg-gray-800/70 transition-all duration-300 hover:-translate-y-2 hover:border-[#03989e]/50"
             >
-              <YoutubeIcon className="h-16 w-16 text-red-600 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-semibold text-gray-900 mt-4">YouTube</h3>
-              <p className="text-gray-600 text-center mt-2">Vídeos educativos e tutoriais</p>
+              <YoutubeIcon className="h-16 w-16 text-[#03989e] group-hover:scale-110 transition-transform" />
+              <h3 className="text-xl font-semibold text-white mt-4">YouTube</h3>
+              <p className="text-gray-300 text-center mt-2">Technical demos e tutorials</p>
             </a>
           </div>
         </div>
       </section>
 
       {/* Resources Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-[#141113] to-gray-900">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <BookOpen className="h-12 w-12 text-green-600 mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Links Úteis e Recursos</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Uma coleção cuidadosamente selecionada de ferramentas, documentações 
-              e recursos essenciais para profissionais de AppSec.
+            <BookOpen className="h-12 w-12 text-[#03989e] mx-auto mb-4" />
+            <h2 className="text-4xl font-bold text-white mb-4">Security Arsenal</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Ferramentas essenciais, frameworks de segurança e recursos 
+              para profissionais de cibersegurança e pesquisadores.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow group">
+            <Card className="bg-gray-800/50 border-[#03989e]/30 hover:bg-gray-800/70 transition-all group hover:border-[#03989e]/50">
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <span>OWASP Foundation</span>
-                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-blue-600" />
+                <CardTitle className="flex items-center justify-between text-white">
+                  <span>OWASP Arsenal</span>
+                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-[#03989e]" />
                 </CardTitle>
-                <CardDescription>
-                  Recursos oficiais da OWASP incluindo Top 10, ASVS, e guias de testing
+                <CardDescription className="text-gray-300">
+                  Top 10, ASVS, Testing Guide e ferramentas de security testing
                 </CardDescription>
               </CardHeader>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow group">
+            <Card className="bg-gray-800/50 border-[#03989e]/30 hover:bg-gray-800/70 transition-all group hover:border-[#03989e]/50">
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <span>NIST Cybersecurity</span>
-                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-blue-600" />
+                <CardTitle className="flex items-center justify-between text-white">
+                  <span>NIST Framework</span>
+                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-[#03989e]" />
                 </CardTitle>
-                <CardDescription>
-                  Framework e guidelines do NIST para implementação de segurança
+                <CardDescription className="text-gray-300">
+                  Cybersecurity Framework e guidelines para implementação
                 </CardDescription>
               </CardHeader>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow group">
+            <Card className="bg-gray-800/50 border-[#03989e]/30 hover:bg-gray-800/70 transition-all group hover:border-[#03989e]/50">
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <span>PortSwigger Academy</span>
-                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-blue-600" />
+                <CardTitle className="flex items-center justify-between text-white">
+                  <span>Exploit Database</span>
+                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-[#03989e]" />
                 </CardTitle>
-                <CardDescription>
-                  Laboratórios práticos e treinamentos em web security
+                <CardDescription className="text-gray-300">
+                  Repository de exploits e payloads para security research
                 </CardDescription>
               </CardHeader>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow group">
+            <Card className="bg-gray-800/50 border-[#03989e]/30 hover:bg-gray-800/70 transition-all group hover:border-[#03989e]/50">
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <span>SANS Reading Room</span>
-                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-blue-600" />
+                <CardTitle className="flex items-center justify-between text-white">
+                  <span>MITRE ATT&CK</span>
+                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-[#03989e]" />
                 </CardTitle>
-                <CardDescription>
-                  White papers e pesquisas acadêmicas sobre segurança
+                <CardDescription className="text-gray-300">
+                  Framework de tactics, techniques e procedures
                 </CardDescription>
               </CardHeader>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow group">
+            <Card className="bg-gray-800/50 border-[#03989e]/30 hover:bg-gray-800/70 transition-all group hover:border-[#03989e]/50">
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <span>CVE Database</span>
-                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-blue-600" />
+                <CardTitle className="flex items-center justify-between text-white">
+                  <span>CVE Intelligence</span>
+                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-[#03989e]" />
                 </CardTitle>
-                <CardDescription>
-                  Base de dados oficial de vulnerabilidades conhecidas
+                <CardDescription className="text-gray-300">
+                  Base oficial de vulnerabilidades e threat intelligence
                 </CardDescription>
               </CardHeader>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow group">
+            <Card className="bg-gray-800/50 border-[#03989e]/30 hover:bg-gray-800/70 transition-all group hover:border-[#03989e]/50">
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <span>Security Tools</span>
-                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-blue-600" />
+                <CardTitle className="flex items-center justify-between text-white">
+                  <span>Security Toolkit</span>
+                  <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-[#03989e]" />
                 </CardTitle>
-                <CardDescription>
-                  Lista curada das melhores ferramentas de security testing
+                <CardDescription className="text-gray-300">
+                  Curated list das melhores ferramentas de hacking ético
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -333,22 +359,22 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-black/50 border-t border-[#03989e]/30 text-white py-12">
         <div className="container mx-auto px-6">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="rounded-full bg-blue-600 p-4">
-                <Shield className="h-8 w-8 text-white" />
+              <div className="rounded-full bg-[#03989e]/20 p-4 border border-[#03989e]/50 cyber-glow">
+                <Shield className="h-8 w-8 text-[#03989e]" />
               </div>
             </div>
-            <h3 className="text-2xl font-bold mb-4">Guia de AppSec</h3>
+            <h3 className="text-2xl font-bold mb-4 text-white">Guia de AppSec</h3>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Tornando a segurança de aplicações acessível para todos os desenvolvedores 
-              e profissionais de tecnologia.
+              Advancing cybersecurity through research, education and innovation. 
+              Securing the digital future, one application at a time.
             </p>
-            <Separator className="bg-gray-700 mb-6" />
+            <Separator className="bg-[#03989e]/30 mb-6" />
             <p className="text-gray-500">
-              © 2024 Guia de AppSec. Todos os direitos reservados.
+              © 2024 Guia de AppSec. All systems secured.
             </p>
           </div>
         </div>
