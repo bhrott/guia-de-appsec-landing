@@ -13,7 +13,7 @@ const YouTube = () => {
             <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-white mb-4 flex items-center justify-center">
                 <Youtube className="h-10 w-10 text-[#04d6c8] mr-4" />
-                Nosso Canal no Youtube
+                Youtube
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Tutoriais, dicas e discussões sobre segurança de aplicações, desenvolvimento seguro e afins.

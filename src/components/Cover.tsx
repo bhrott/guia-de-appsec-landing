@@ -6,8 +6,8 @@ const Cover = () => {
         <div className="absolute inset-0 pattern-overlay"></div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <div className="mb-8 flex justify-center">
-            <div className="relative">
-              <div className="rounded-full bg-[#04d6c8]/20 p-8 backdrop-blur-sm border-2 border-[#04d6c8]/50 security-glow">
+            <div className="relative mt-10">
+              <div className="rounded-full bg-[#04d6c8]/20 p-8 backdrop-blur-sm border-2 border-[#04d6c8]/50 security-glow ">
                 {/* <Shield className="h-24 w-24 text-[#04d6c8]" /> */}
                 <img src="logo.png" alt="" />
               </div>

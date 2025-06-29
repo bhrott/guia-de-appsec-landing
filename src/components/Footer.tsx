@@ -8,8 +8,8 @@ const Footer = () => {
             <div className="container mx-auto px-6">
             <div className="text-center">
                 <div className="flex justify-center mb-6">
-                <div className="rounded-full bg-[#04d6c8]/20 p-4 border-2 border-[#04d6c8]/50 security-glow">
-                    <Shield className="h-8 w-8 text-[#04d6c8]" />
+                <div className="rounded-full bg-[#04d6c8]/20 p-4 border-2 border-[#04d6c8]/50 security-glow overflow-hidden">
+                    <img src="/logo.png" alt="" className="w-32 h-32" />
                 </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Guia de AppSec</h3>
