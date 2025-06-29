@@ -137,3 +137,17 @@
   background-image: 
     linear-gradient(45deg, transparent 30%, rgba(4, 214, 200, 0.02) 50%, transparent 70%);
 }
+
+#youtube_video {
+  background-image: url('/img/youtube-page.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#newsletter_image {
+  background-image: url('/img/newsletter.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
