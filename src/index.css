@@ -3,8 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
-
+/* Design system with new color scheme */
 @layer base {
   :root {
     --background: 20 7% 8%;
@@ -16,8 +15,8 @@
     --popover: 20 7% 12%;
     --popover-foreground: 180 100% 98%;
 
-    --primary: 184 96% 32%;
-    --primary-foreground: 180 100% 98%;
+    --primary: 177 96% 42%;
+    --primary-foreground: 20 7% 8%;
 
     --secondary: 20 7% 15%;
     --secondary-foreground: 180 100% 98%;
@@ -25,26 +24,26 @@
     --muted: 20 7% 15%;
     --muted-foreground: 180 50% 70%;
 
-    --accent: 184 96% 32%;
-    --accent-foreground: 180 100% 98%;
+    --accent: 177 96% 42%;
+    --accent-foreground: 20 7% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 20 7% 20%;
     --input: 20 7% 20%;
-    --ring: 184 96% 32%;
+    --ring: 177 96% 42%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 20 7% 10%;
     --sidebar-foreground: 180 100% 98%;
-    --sidebar-primary: 184 96% 32%;
-    --sidebar-primary-foreground: 180 100% 98%;
+    --sidebar-primary: 177 96% 42%;
+    --sidebar-primary-foreground: 20 7% 8%;
     --sidebar-accent: 20 7% 15%;
     --sidebar-accent-foreground: 180 100% 98%;
     --sidebar-border: 20 7% 20%;
-    --sidebar-ring: 184 96% 32%;
+    --sidebar-ring: 177 96% 42%;
   }
 
   .dark {
@@ -57,8 +56,8 @@
     --popover: 20 7% 12%;
     --popover-foreground: 180 100% 98%;
 
-    --primary: 184 96% 32%;
-    --primary-foreground: 180 100% 98%;
+    --primary: 177 96% 42%;
+    --primary-foreground: 20 7% 8%;
 
     --secondary: 20 7% 15%;
     --secondary-foreground: 180 100% 98%;
@@ -66,23 +65,23 @@
     --muted: 20 7% 15%;
     --muted-foreground: 180 50% 70%;
 
-    --accent: 184 96% 32%;
-    --accent-foreground: 180 100% 98%;
+    --accent: 177 96% 42%;
+    --accent-foreground: 20 7% 8%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 20 7% 20%;
     --input: 20 7% 20%;
-    --ring: 184 96% 32%;
+    --ring: 177 96% 42%;
     --sidebar-background: 20 7% 10%;
     --sidebar-foreground: 180 100% 98%;
-    --sidebar-primary: 184 96% 32%;
-    --sidebar-primary-foreground: 180 100% 98%;
+    --sidebar-primary: 177 96% 42%;
+    --sidebar-primary-foreground: 20 7% 8%;
     --sidebar-accent: 20 7% 15%;
     --sidebar-accent-foreground: 180 100% 98%;
     --sidebar-border: 20 7% 20%;
-    --sidebar-ring: 184 96% 32%;
+    --sidebar-ring: 177 96% 42%;
   }
 }
 
@@ -94,37 +93,47 @@
   body {
     @apply bg-background text-foreground;
     background-color: #141113;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
-/* Custom cyber animations */
-@keyframes matrix-rain {
-  0% { transform: translateY(-100vh); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { transform: translateY(100vh); opacity: 0; }
-}
-
-@keyframes cyber-glow {
+/* Security-themed animations */
+@keyframes security-pulse {
   0%, 100% { 
-    box-shadow: 0 0 5px #03989e, 0 0 10px #03989e, 0 0 15px #03989e;
+    box-shadow: 0 0 8px #04d6c8, 0 0 16px #04d6c8;
+    opacity: 1;
   }
   50% { 
-    box-shadow: 0 0 10px #03989e, 0 0 20px #03989e, 0 0 30px #03989e;
+    box-shadow: 0 0 16px #04d6c8, 0 0 32px #04d6c8;
+    opacity: 0.8;
   }
 }
 
-.cyber-glow {
-  animation: cyber-glow 2s ease-in-out infinite;
+@keyframes data-flow {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
 }
 
-.matrix-bg::before {
+.security-glow {
+  animation: security-pulse 3s ease-in-out infinite;
+}
+
+.data-pattern::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 30%, rgba(3, 152, 158, 0.1) 50%, transparent 70%);
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(4, 214, 200, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(4, 214, 200, 0.05) 0%, transparent 50%);
+  pointer-events: none;
   z-index: 1;
+}
+
+.pattern-overlay {
+  background-image: 
+    linear-gradient(45deg, transparent 30%, rgba(4, 214, 200, 0.02) 50%, transparent 70%);
 }
